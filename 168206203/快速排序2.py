@@ -4,7 +4,7 @@ Created on Fri Oct 26 19:32:35 2018
 
 @author: Yan
 """
-"""快速排序"""
+"""快速排序2"""
 
 def Q_sort(array):
     if len(array)<2:
