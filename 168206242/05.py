@@ -15,10 +15,7 @@ def merge(a, b):
     else:
         for i in a[j:]:
             c.append(i)
-
     return c
-
-
 def merge_sort(lists):
     if len(lists) <= 1:
         return lists
@@ -26,8 +23,6 @@ def merge_sort(lists):
     left = merge_sort(lists[:middle])
     right = merge_sort(lists[middle:])
     return merge(left, right)
-
-
 if __name__ == '__main__':
     a = [4, 7, 8, 3, 5, 9]
     print (merge_sort(a))
