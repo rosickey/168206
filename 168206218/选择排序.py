@@ -12,4 +12,5 @@ def select_shor(alist):
     return alist
 
 alist = [12,44,29,59,11,38]
-print(select_shor(alist))
+select_shor(alist)
+print('排序后:'+alist)
