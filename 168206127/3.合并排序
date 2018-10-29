@@ -1,0 +1,39 @@
+def mergeSort(zx):
+    length = len(zx)
+    mid = length//2
+
+    if length > 1 :
+        left = zx[:mid]
+        right = zx[mid:]
+        mergeSort(left)
+        mergeSort(right)
+        merge(zx,left,right)
+
+def merge(zx,left,right):
+    l = 0
+    r = 0
+    i = 0
+    L_len = len(left)
+    R_len = len(right)
+    while l < L_len and r < R_len :
+        if left[l] < right[r]:
+            zx[i] = left[l]
+            i += 1
+            l += 1
+        else:
+            zx[i] = right[r]
+            i += 1
+            r += 1
+    while l < L_len:
+        zx[i] = left[l]
+        i += 1
+        l += 1
+    while r < R_len:
+        zx[i] = right[r]
+        i += 1
+        r += 1
+
+#Test--------------------------------        
+zx = [22,83,2,223,51,7,226]
+mergeSort(zx)
+print(zx)
