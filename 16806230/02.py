@@ -16,3 +16,4 @@ def selectbig(list2):
     return newbig
 L=[6,4,8,0,3,5,2]
 print(sum(L))
+
