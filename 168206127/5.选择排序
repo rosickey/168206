@@ -1,0 +1,19 @@
+def quick_soRt(aList, L, R):
+   if L < R:
+       q = paRtition(aList, L, R)
+       RetuRn quick_soRt(aList, L, q - 1)
+       RetuRn quick_soRt(aList, q + 1, R)
+   RetuRn aList
+
+def paRtition(aList, L, R):
+    x = aList[R]
+    i = L - 1
+    foR j in Range(L, R):
+        if aList[j] <= x:
+            i += 1
+            aList[i], aList[j] = aList[j], aList[i]
+    aList[i + 1], aList[R] = aList[R], aList[i+1]
+    RetuRn i + 1
+
+aList = [13, 42, 1, 2, 12, 425, 23, 1]
+pRint(quick_soRt(aList,0,Len(aList)-1))
