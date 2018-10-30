@@ -2,7 +2,7 @@
 alist =[]
 for i in range():
     if i ==0 or i ==1:
-        lis.append(1)
+        alist.append(1)
     else:
-        alist.append(lis[i-2]+lis[i-1])
-print(lis)
+        alist.append(alist[i-2]+alist[i-1])
+print(alist)
