@@ -4,3 +4,4 @@
  seq=range(0,100)
  print(seach(seq ,33))。
  print(seach(seq ,33))
+     
