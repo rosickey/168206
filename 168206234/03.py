@@ -36,7 +36,7 @@ def binary_serach(list, item):
     return None
 my_list=[1,3,5,7,9]
 
-def bs3(list,item):
+def bs3(list,item): 
     mid=len(list)//2
     if list[mid]==item:
         return list[mid]
