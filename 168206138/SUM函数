@@ -1,4 +1,4 @@
-
+"""
 def sum (alist, L=[]):
     if len(L)==0:
         L.append(0)
@@ -7,7 +7,15 @@ def sum (alist, L=[]):
         alist.remove(alist[0])
         return sum(alist)
     return L[0]
-
+"""
+def Sum(alist):
+    if len(alist) < 1:
+        return 0
+    else:
+        for i in alist:
+            aum += i
+        return sum
+        
 alist = [2，3,4,5]
 s=sum(alist)
 print(s)
