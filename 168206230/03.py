@@ -1,22 +1,21 @@
-#!/usr/bin/python3
-# -- coding: utf-8 -- 
-'''斐波那契数'''
-'''def fb(num):
-    if num<=2:
-        return 1
-    else:
-        return fb(num-1)+fb(num-2)
-for i in range(1,30):
-    print(fb(i),end=" ")'''
-def fa(n):
-    if n==1:
-        return [1]
-    if n==2:
-        return [1,1]
-    list=[1,1]
-    for i in range(2,n):
-        list.append(list[-2]+list[-1])
-    return list
-if __name__=="__main__":
-    x=int(input("请输入需要求个数："))
-    print(fa(x))
+def printNarcissisticNumber(self, num):
+        num = int(num)
+        if num < 100 or num > +1000:
+            print("不是水仙花数")
+        else:
+            geWei = num % 10
+            baiWei = int(num / 100)
+            shiWei = int((num - baiWei * 100) / 10)
+            sum = geWei * geWei * geWei + shiWei * shiWei * shiWei + baiWei * baiWei * baiWei
+            if sum == num:
+                print("%d是水仙花数" % num)
+            else:
+                print("不是水仙花数")
+def printNarcissisticNumber1(self):
+        for num in range(100, 1000):
+            geWei = num % 10
+            baiWei = int(num / 100)
+            shiWei = int((num - baiWei * 100) / 10)
+            sum = geWei * geWei * geWei + shiWei * shiWei * shiWei + baiWei * baiWei * baiWei
+            if sum == num:
+                print("%d是水仙花数" % num)
