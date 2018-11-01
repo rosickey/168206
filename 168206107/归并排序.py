@@ -30,6 +30,25 @@ def Merge(left,right):
     right.sort()
     return right
     '''
-
+#another way
+"""
+def MergeSort(lists):
+    if len(lists) <= 1:
+        return lists
+    num = round( len(lists)/2 )
+    left = MergeSort(lists[:num])
+    right = MergeSort(lists[num:])
+    MergeSort(left)
+    MergeSort(right)
+    result = []
+    if left and right:   
+        for value in left:
+            right.append(value)
+    right.sort()
+    return right
+ """
 
 print(MergeSort([1, 2, 3, 4, 5, 6, 7, 90, 21, 23, 45]))
+
+
+
