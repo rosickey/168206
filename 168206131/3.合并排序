@@ -1,0 +1,39 @@
+def mergeSort(I):
+    length = len(I)
+    mid = length//2
+
+    if length > 1 :
+        left = I[:mid]
+        right = I[mid:]
+        mergeSort(left)
+        mergeSort(right)
+        merge(I,left,right)
+
+def merge(I,left,right):
+    l = 0
+    r = 0
+    i = 0
+    L_len = len(left)
+    R_len = len(right)
+    while l < L_len and r < R_len :
+        if left[l] < right[r]:
+            I[i] = left[l]
+            i += 1
+            l += 1
+        else:
+            I[i] = right[r]
+            i += 1
+            r += 1
+    while l < L_len:
+        I[i] = left[l]
+        i += 1
+        l += 1
+    while r < R_len:
+        I[i] = right[r]
+        i += 1
+        r += 1
+
+#Test--------------------------------        
+I = [22,11,42,13,12,47,226]
+mergeSort(I)
+print(I)
