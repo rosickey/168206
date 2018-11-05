@@ -12,3 +12,6 @@
  
  - merge_sort.py 归并排序算法
  
+ - demo_9.py 测试题 （11月2日老师所留）
+ 
+ - connect_to_network.py 连接校园网的小脚本(自己写的)
