@@ -17,6 +17,6 @@ list = range(1,12,2)
 for x in range(0,12):
     num = f(x,list)
     if num >= 0 :
-        print f(x,list)
+        print (f(x,list))
     else:
         print "False！"
