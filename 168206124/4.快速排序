@@ -1,0 +1,10 @@
+def qsort_(list)
+    if len(list) = 1
+        return list
+    else
+        mid = list[0]
+        L = [i for i in list[1len(list)] if i = mid]
+        H = [i for i in list[1len(list)] if i  mid]
+        return qsort_(L) + [mid] + qsort_(H)
+list = [54,81,32,22,28,312,14]
+print (qsort_(list))
