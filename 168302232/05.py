@@ -16,7 +16,6 @@ def selectedSort(myList):
         print("Round ",i,": ",myList)
 
 
-
 myList = [1,4,5,0,6]
 print("Selected Sort: ")
 selectedSort(myList)
