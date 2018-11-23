@@ -8,3 +8,4 @@
   05 merge_sort.py   
   06 sum_sort.py   
   07topoSort.py
+  08 dijkstra.py
