@@ -50,10 +50,10 @@ while node is not None:
 	for n in neighbors.keys():
 		new_cost = cost + neighbors[n]
 		if costs[n] > new_cost:
-			print("start -> " + n + " 要走" + str(costs[n]) + "改为")
+			print("start -> " + n + " 需要" + str(costs[n]) + "美分" +"改为")
 			costs[n] = new_cost
 			parents[n] =node
-		print("start -> " + n + " 要走" + str(costs[n]))
+		print("start -> " + n + " 需要" + str(costs[n]) + "美分")
 	processed.append(node)
 	node = find_lowest_cost_node(costs)
 for n,m in costs.items():
