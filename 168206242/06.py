@@ -1,6 +1,6 @@
 
 infinity=float("inf")
-graph={}
+graph={}#定义散列表
 graph["yp"]={}
 graph["yp"]["hb"]=0
 graph["yp"]["cp"]=5
@@ -20,22 +20,22 @@ graph["jzg"]={}
 graph["jzg"]["gq"]=10
  
 
-costs={}
+costs={}#定义cost表
 costs["hb"]=0
 costs["cp"]=5
 costs["jt"]=infinity
 costs["jzg"]=infinity
 costs["gq"]=infinity
  
-parents={}
+parents={}#定义父表
 parents["hb"]="yp"
 parents["cp"]="yp"
 parents["jt"]=None
 parents["jzg"]=None
 parents["gq"]=None
-processed=[]
+processed=[]#存储处理过的路径
  
-def find_lowest_cost_node(costs):
+def find_lowest_cost_node(costs):#找出最低开销节点
      lowest_cost=float("inf")
      lowest_cost_node=None
      for node in costs:
@@ -46,7 +46,7 @@ def find_lowest_cost_node(costs):
      return lowest_cost_node
  
 
-def breadth_first_search(costs):
+def breadth_first_search(costs):#核心算法
      node=find_lowest_cost_node(costs)
      while node is not None:
          cost=costs[node]
@@ -66,7 +66,7 @@ def breadth_first_search(costs):
 
 
 
-def shortest_path_search():
+def shortest_path_search():#计算最短路径
     node="gq"
     shortest_path=["gq"]
     while parents[node] is not "yp":
@@ -76,7 +76,6 @@ def shortest_path_search():
     return shortest_path
 
 breadth_first_search(costs)
-print( processed)
-print(costs)
-print(parents)
-print(shortest_path_search())
+print(costs)#路径的开销
+print(parents)#所有路径的父类子类关系
+print(shortest_path_search())#经过的路径
